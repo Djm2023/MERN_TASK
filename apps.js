@@ -52,9 +52,6 @@ const readStocksData = () => {
 const jsonFilePath = path.join(__dirname, "stocksData.json");
 app.use(express.static(path.dirname(jsonFilePath)));
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
 
 app.get("/api/data", (req, res) => {
   res.sendFile(jsonFilePath);
